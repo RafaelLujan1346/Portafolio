@@ -1,36 +1,30 @@
-// ==== Navegación por scroll suave ====
-const buttons = document.querySelectorAll('.navbar button');
+// ==== SCROLL SUAVE ====
+const links = document.querySelectorAll('.nav a');
 
-buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const target = document.getElementById(btn.dataset.section);
-        target.scrollIntoView({ behavior: 'smooth' });
+links.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
-// ==== Expansión de tarjetas en PROYECTOS ====
-const cards = document.querySelectorAll('#proyectos .card');
+// ==== ANIMACIONES DE ENTRADA ====
+const observerOptions = {
+    threshold: 0.1
+};
 
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        const infoBox = card.querySelector('.extra-info');
-        const text = card.dataset.info;
-
-        // Cierra tarjeta abierta
-        if (card.classList.contains('expanded')) {
-            card.classList.remove('expanded');
-            infoBox.textContent = "";
-            return;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
         }
-
-        // Cierra otras tarjetas
-        cards.forEach(c => {
-            c.classList.remove('expanded');
-            c.querySelector('.extra-info').textContent = "";
-        });
-
-        // Muestra información
-        card.classList.add('expanded');
-        infoBox.textContent = text;
     });
+}, observerOptions);
+
+document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
 });

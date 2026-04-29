@@ -1,216 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rafael Lujan | Portafolio</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-<!-- HERO / INICIO -->
-<section id="inicio" class="section hero">
-    <div class="hero-container">
-        <div class="hero-photo">
-            <img src="img/yo.jpeg" alt="Foto de Rafael Ernesto Lujan Olivas">
-        </div>
-        <div class="hero-text">
-            <h1>Bienvenido</h1>
-            <p>Mi nombre es <strong>Rafael Ernesto Lujan Olivas</strong></p>
-            <p>Soy un estudiante de Ingeniería en Sistemas Computacionales con enfoque en desarrollo web, creación de aplicaciones interactivas y soluciones digitales innovadoras.</p>
-        </div>
+
+<!-- NAV -->
+<nav class="nav">
+    <h2>Rafael</h2>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contáctame</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <div class="hero-text">
+        <h1>Hola, soy Rafael 👋</h1>
+        <p>Desarrollador web y entusiasta de la tecnología, con proyectos en programación, robótica y diseño digital.</p>
+        <a href="#proyectos" class="btn">Ver proyectos</a>
     </div>
-</section>
-
-<!-- NAVBAR -->
-<div class="navbar">
-    <button data-section="inicio">Inicio</button>
-    <button data-section="pasatiempos">Pasatiempos</button>
-    <button data-section="caracteristicas">Características</button>
-    <button data-section="proyectos">Proyectos</button>
-    <button data-section="estudio">Mi Grado de Estudio</button>
-    <button data-section="idiomas">Idiomas</button>
-    <button data-section="contacto">Contacto</button>
-</div>
-
-<!-- PASATIEMPOS -->
-<section id="pasatiempos" class="section">
-    <h2>Pasatiempos</h2>
-    <div class="hobbies-grid">
-        <div class="hobby-card">
-            <div class="icon">🎮</div>
-            <h3>Videojuegos</h3>
-            <p>Me gusta explorar mundos virtuales, resolver retos y competir en línea.</p>
-        </div>
-        <div class="hobby-card">
-            <div class="icon">🎧</div>
-            <h3>Música</h3>
-            <p>Escucho música para inspirarme mientras programo y diseño.</p>
-        </div>
-        <div class="hobby-card">
-            <div class="icon">🕹️</div>
-            <h3>Desarrollo de Videojuegos</h3>
-            <p>Creo experiencias interactivas utilizando motores como Godot, combinando programación, diseño y creatividad.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CARACTERÍSTICAS Y HABILIDADES -->
-<section id="caracteristicas" class="section">
-    <h2>Características y Habilidades</h2>
-    <p>Conoce un poco más sobre mis cualidades personales y habilidades.</p>
-    <div class="features-container">
-        <div class="feature-card">
-            <h3>Características</h3>
-            <div class="feature-item">Responsable y comprometido</div>
-            <div class="feature-item">Capacidad de trabajo en equipo</div>
-            <div class="feature-item">Pensamiento analítico y lógico</div>
-            <div class="feature-item">Curiosidad tecnológica y ganas de aprender</div>
-            <div class="feature-item">Paciencia y perseverancia</div>
-            <div class="feature-item">Adaptable a nuevas herramientas y entornos</div>
-            <div class="feature-item">Comunicación clara y efectiva</div>
-        </div>
-        <div class="feature-card">
-            <h3>Habilidades</h3>
-            <div class="feature-item">Desarrollo web: HTML, CSS, JavaScript, React</div>
-            <div class="feature-item">Desarrollo de videojuegos en Godot Engine</div>
-            <div class="feature-item">Diseño y prototipado de interfaces con Figma</div>
-            <div class="feature-item">Manejo de herramientas gráficas: Adobe Illustrator</div>
-            <div class="feature-item">Programación orientada a objetos y lógica computacional</div>
-            <div class="feature-item">Uso de metodologías ágiles (Scrum)</div>
-            <div class="feature-item">Trabajo con bases de datos y backend básico (PHP, MySQL)</div>
-        </div>
+    <div class="hero-img">
+        <img src="img/yo.jpeg" alt="Foto de Rafael Lujan">
     </div>
 </section>
 
 <!-- PROYECTOS -->
 <section id="proyectos" class="section">
     <h2>Proyectos</h2>
-    <div class="grid">
-        <div class="card" data-info="Proyecto 1: Página web comercial con carrito de compras">
-            <img src="./img/proyecto1.png" alt="Proyecto 1">
-            <h3>Proyecto 1</h3>
-            <p>Prototipo de una página web comercial con catálogo de productos e interfaz intuitiva.</p>
-            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+
+    <div class="project-card">
+        <img src="img/proyecto1.png" alt="Tienda Tradoox">
+        <div class="overlay">
+            <h3>Tienda Tradoox</h3>
+            <p>Interfaz de e-commerce mostrando videojuegos en oferta. Proyecto de diseño web con enfoque en usabilidad y experiencia de compra.</p>
         </div>
-        <div class="card" data-info="Proyecto 2: Videojuego educativo web">
-            <img src="./img/proyecto2.png" alt="Proyecto 2">
-            <h3>Proyecto 2</h3>
-            <p>Videojuego web educativo para niños de primaria, enfocado en geografía y cultura mundial.</p>
-            <p><strong>Tecnologías:</strong> Godot Engine, GDScript, HTML, CSS</p>
+    </div>
+
+    <div class="project-card">
+        <img src="img/proyecto2.png" alt="Videojuego Carmen Sandiego">
+        <div class="overlay">
+            <h3>Videojuego Carmen Sandiego</h3>
+            <p>Juego educativo con interfaz interactiva. Proyecto de gamificación para reforzar conocimientos de geografía y cultura.</p>
         </div>
-        <div class="card" data-info="Proyecto 3: Galería interactiva para artistas">
-            <img src="./img/proyecto3.jpeg" alt="Proyecto 3">
-            <h3>Proyecto 3</h3>
-            <p>Página interactiva para artistas desarrollada en colaboración con otros diseñadores.</p>
-            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Figma</p>
+    </div>
+
+    <div class="project-card">
+        <img src="img/proyecto3.jpeg" alt="Galería ArtMood">
+        <div class="overlay">
+            <h3>ArtMood</h3>
+            <p>Galería interactiva de arte digital. Proyecto UI/UX que permite explorar obras según emociones y compartir experiencias artísticas.</p>
         </div>
+    </div>
+
+    <div class="project-card">
+        <img src="img/arduino1.jpeg" alt="Brazo robótico">
+        <div class="overlay">
+            <h3>Brazo Robótico</h3>
+            <p>Modelo educativo con servomotores y control electrónico. Proyecto de robótica para manipulación de objetos pequeños.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="img/Blender.png" alt="Modelado 3D en Blender">
+        <div class="overlay">
+            <h3>Modelado 3D</h3>
+            <p>Figura estilo LEGO creada en Blender con referencias ortográficas. Proyecto de modelado digital y diseño 3D.</p>
+        </div>
+    </div>
+
+    <!-- Proyecto fusionado: Carro Arduino + Esquema Electrónico -->
+    <div class="project-card">
+        <div class="dual-images">
+            <img src="img/carroArduino.jpeg" alt="Carro Arduino">
+            <img src="img/Diagrama.png" alt="Esquema Electrónico">
+        </div>
+        <div class="overlay">
+            <h3>Carro Arduino con Esquema Electrónico</h3>
+            <p>Vehículo robótico controlado por Arduino, equipado con motores DC, sensores ultrasónicos y módulo Bluetooth. 
+            El proyecto incluye el diseño del esquema electrónico completo en Arduino Mega, mostrando la conexión de motores, sensores y control remoto. 
+            Este trabajo combina tanto la construcción física del carro como la documentación técnica del circuito.</p>
+        </div>
+    </div>
+
+    <!-- Nuevo proyecto ArchiMarket -->
+    <div class="project-card">
+        <img src="img/Archimarket.png" alt="ArchiMarket">
+        <div class="overlay">
+            <h3>ArchiMarket</h3>
+            <p>Plataforma web para arquitectos que permite descargar modelos 3D optimizados para proyectos de diseño y construcción. 
+            ArchiMarket ofrece una amplia biblioteca de recursos digitales, categorizados por estilos arquitectónicos y materiales.
+            Primera página subida a un servidor.</p>
+            <a href="https://aarchimarket3d.alwaysdata.net" target="_blank">Visitar ArchiMarket</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- CERTIFICACIONES -->
+<section id="certificaciones" class="section">
+    <h2>Certificaciones</h2>
+    <div class="certifications">
+
+        <div class="cert-card">
+            <img src="/img/insigniaLinux.png" alt="Certificación Linux Unhatched">
+            <p>Curso Linux Unhatched en Cisco Networking Academy. Fundamentos de Linux y administración básica.</p>
+        </div>
+
+        <div class="cert-card">
+            <img src="/img/certificadoLinux.png" alt="Certificado Linux Unhatched">
+            <p>Certificado emitido en junio 2025 por Cisco Networking Academy, validando conocimientos en Linux básico.</p>
+        </div>
+
     </div>
 </section>
 
-<!-- EDUCACIÓN -->
-<section id="estudio" class="section">
-    <h2>Mi Grado de Estudio</h2>
-    <p>A lo largo de mi formación académica, he adquirido conocimientos y habilidades que me han permitido desarrollarme en el área de sistemas y tecnología.</p>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Primaria</h3>
-                <p><strong>Escuela Leona Vicario</strong> - San Buenaventura, Chihuahua</p>
-                <p>Aprendizaje básico en todas las áreas, desarrollo de hábitos de estudio y curiosidad tecnológica.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Secundaria</h3>
-                <p><strong>Técnica #17</strong> - Municipio de Laquebedo, Chihuahua</p>
-                <p>Formación técnica inicial, introducción a computación informática, matemáticas y ciencias aplicadas.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Preparatoria</h3>
-                <p><strong>Preparatoria 8411</strong> - Buenaventura, Chihuahua</p>
-                <p>Consolidación de conocimientos en ciencias, tecnología y matemáticas. Primeros proyectos de diseño.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Universidad</h3>
-                <p><strong>ITSNCG</strong> - Nuevo Casas Grandes, Chihuahua</p>
-                <p>Estudiante de Ingeniería en Sistemas Computacionales, con enfoque en desarrollo web, videojuegos y soluciones digitales interactivas (Actualmente en curso).</p>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="certifications-title">Mis Certificaciones</h2>
-    <div class="certifications-grid">
-        <div class="cert-card">
-            <div class="cert-type">Insignia</div>
-            <img src="./img/insigniaLinux.png" alt="Insignia Linux Unhatched">
-            <h3>Linux Unhatched</h3>
-            <p>Curso</p>
-            <a href="#" class="cert-link">Insignia de reclamación</a>
-        </div>
-        <div class="cert-card">
-            <div class="cert-type">Certificado</div>
-            <img src="./img/certificadoLinux.png" alt="Certificado Linux Unhatched">
-            <h3>Linux Unhatched</h3>
-            <p>Curso</p>
-            <span class="cert-date">Emitido el: 07 jun 2025</span>
-        </div>
-    </div>
-</section>
-
-<!-- IDIOMAS -->
-<section id="idiomas" class="section">
-    <h2>Idiomas</h2>
-    <p>Conozco y manejo los siguientes idiomas:</p>
-    <div class="languages-grid">
-        <div class="language-card">
-            <h3>Español</h3>
-            <p>Nativo</p>
-        </div>
-        <div class="language-card">
-            <h3>Inglés</h3>
-            <p>Básico - A2</p>
-        </div>
+<!-- HABILIDADES -->
+<section id="habilidades" class="section">
+    <h2>Habilidades</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>Arduino</span>
+        <span>Blender</span>
+        <span>Godot</span>
     </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto" class="section">
     <h2>Contáctame</h2>
-    <p>Puedes comunicarte conmigo a través de los siguientes medios:</p>
-    <div class="contact-grid">
-        <div class="contact-card">
-            <h3>Correo Electrónico</h3>
-            <p><a href="mailto:rafael02lujan@gmail.com">rafael02lujan@gmail.com</a></p>
-        </div>
-        <div class="contact-card">
-            <h3>GitHub</h3>
-            <p><a href="https://github.com/RafaelLujan1346" target="_blank">https://github.com/RafaelLujan1346</a></p>
-        </div>
-        <div class="contact-card">
-            <h3>Teléfono</h3>
-            <p><a href="tel:+526361375304">🇲🇽+52 636 137 5304</a></p>
-        </div>
+    <div class="contact">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:rafael02lujan@gmail.com">rafael02lujan@gmail.com</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/RafaelLujan1346" target="_blank">github.com/RafaelLujan1346</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+526361375304">+52 636 137 5304</a></p>
     </div>
 </section>
 
-<!-- JAVASCRIPT -->
-<script>
-    // Navegación por scroll suave
-    const buttons = document.querySelectorAll('.navbar button');
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = document.getElementById(btn.dataset.section);
-            target.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-</script>
+<!-- FOOTER -->
+<footer class="footer">
+    <p>&copy; 2026 Rafael Lujan. Todos los derechos reservados.</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
