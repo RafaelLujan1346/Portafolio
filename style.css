@@ -1,339 +1,550 @@
-/* =========================
-   RESET
-========================= */
+/* RESET Y ESTILOS BASE - ORIGINAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   VARIABLES
-========================= */
-:root {
-    --primary: #d4af37;
-    --secondary: #8b5e3c;
-    --dark: #3a2f2f;
-    --bg: #f7f7f7;
-    --white: #ffffff;
-    --shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* =========================
-   BASE
-========================= */
-html {
-    font-size: 112.5%;
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: #333;
     line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR - MODIFICADO SOLO PARA AÑADIR MENÚ HAMBURGUESA */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2rem;
-    background: rgba(58, 47, 47, 0.8);
-    backdrop-filter: blur(12px);
-    color: #fff;
-    position: sticky;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 .nav h2 {
-    color: var(--primary);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #007acc;
 }
 
 .nav ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: var(--primary);
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    text-align: center;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #007acc;
+}
+
+/* BOTÓN HAMBURGUESA - NUEVO */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+    color: #007acc;
+}
+
+/* MENÚ LATERAL MÓVIL - NUEVO */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-overlay.active .mobile-menu {
+    left: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    background-color: #f8f9fa;
+}
+
+.mobile-menu-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.close-menu:hover {
+    color: #dc3545;
+}
+
+.mobile-nav-menu {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    flex: 1;
+}
+
+.mobile-nav-menu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-menu li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.mobile-nav-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #007acc;
+    padding-left: 2rem;
+}
+
+/* HERO SECTION - MANTENIDO IGUAL */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 5% 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .hero-text {
-    max-width: 500px;
+    flex: 1;
+    min-width: 280px;
 }
 
 .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    color: #222;
 }
 
 .hero-text p {
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
 }
 
-.hero-img img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(255,255,255,0.8);
-}
-
-/* =========================
-   BOTONES
-========================= */
 .btn {
     display: inline-block;
-    background: white;
-    color: var(--dark);
-    padding: 0.8rem 1.6rem;
-    border-radius: 40px;
-    font-weight: 600;
-    margin: 5px;
-    transition: 0.3s;
+    padding: 0.8rem 1.8rem;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 1rem;
 }
 
 .btn:hover {
-    background: var(--dark);
-    color: white;
-    transform: translateY(-3px);
+    background-color: #005f99;
+    transform: translateY(-2px);
 }
 
-/* =========================
-   SECCIONES
-========================= */
+.btn.secondary {
+    background-color: #6c757d;
+}
+
+.btn.secondary:hover {
+    background-color: #5a6268;
+}
+
+.hero-img {
+    flex: 1;
+    text-align: center;
+    min-width: 250px;
+}
+
+.hero-img img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* SECTIONS GENERALES - MANTENIDO IGUAL */
 .section {
-    padding: 4rem 1.5rem;
-    max-width: 1100px;
-    margin: auto;
+    padding: 4rem 5%;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.section:nth-child(even) {
+    background-color: #f8f9fa;
 }
 
 .section h2 {
-    text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: var(--dark);
+    color: #222;
+    text-align: center;
+    position: relative;
 }
 
 .section h2::after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    background: var(--primary);
+    content: '';
     display: block;
-    margin: 0.5rem auto;
+    width: 60px;
+    height: 4px;
+    background-color: #007acc;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
 }
 
-/* =========================
-   TARJETAS PROYECTOS
-========================= */
-.project-card {
-    background: rgba(255,255,255,0.95);
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow);
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-}
-
-/* 🔥 IMÁGENES COMPLETAS (ARREGLADO) */
-.project-card img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-    background: #fff;
-}
-
-.overlay {
-    padding: 1.5rem;
-}
-
-.overlay h3 {
-    color: var(--secondary);
-    margin-bottom: 0.5rem;
-}
-
-.overlay a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* =========================
-   CERTIFICACIONES
-========================= */
-.certifications {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
-.cert-card {
-    width: 180px;
-    background: white;
-    padding: 1rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: var(--shadow);
-}
-
-.cert-card img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* =========================
-   HABILIDADES
-========================= */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills span {
-    background: white;
-    padding: 8px 14px;
-    border-radius: 20px;
-    border: 1px solid #ddd;
-    transition: 0.3s;
-}
-
-.skills span:hover {
-    background: var(--primary);
-    color: white;
-}
-
-/* =========================
-   HOBBIES
-========================= */
+/* PASATIEMPOS - MANTENIDO IGUAL */
 .hobbies {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
 }
 
 .hobby-card {
-    width: 200px;
     background: white;
-    padding: 1.2rem;
+    padding: 2rem;
     border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     text-align: center;
-    box-shadow: var(--shadow);
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
 }
 
 .hobby-card i {
-    font-size: 2rem;
-    color: var(--primary);
+    font-size: 2.5rem;
+    color: #007acc;
+    margin-bottom: 1rem;
 }
 
-/* =========================
-   IMÁGENES DOBLES
-========================= */
-.dual-images img {
+.hobby-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.hobby-card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* PROYECTOS - MODIFICADO PARA QUE LAS FOTOS SE VEAN COMPLETAS EN PC */
+#proyectos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
     width: 100%;
     height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    display: block;
+}
+
+.dual-images {
+    display: flex;
+    gap: 2px;
+    background-color: #f5f5f5;
+}
+
+.dual-images img {
+    width: 50%;
+    height: auto;
+    max-height: 300px;
     object-fit: contain;
 }
 
-/* =========================
-   CONTACTO
-========================= */
+.overlay {
+    padding: 1.5rem;
+    background: white;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007acc;
+}
+
+.overlay p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.overlay a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.overlay a:hover {
+    background-color: #005f99;
+}
+
+.project-card.destacado {
+    border: 2px solid #007acc;
+}
+
+/* CERTIFICACIONES - MANTENIDO IGUAL */
+.certifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.cert-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cert-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.cert-card p {
+    font-weight: 500;
+    color: #333;
+}
+
+/* HABILIDADES - MANTENIDO IGUAL */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-group {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 250px;
+}
+
+.skill-group h3 {
+    margin-bottom: 1rem;
+    color: #007acc;
+    font-size: 1.3rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skills span {
+    background-color: #e9ecef;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* CONTACTO - MANTENIDO IGUAL */
 .contact {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact p {
+    font-size: 1.1rem;
+}
+
+.contact i {
+    margin-right: 0.8rem;
+    color: #007acc;
+    font-size: 1.3rem;
 }
 
 .contact a {
-    color: var(--secondary);
-    display: block;
-    margin: 10px 0;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.contact a:hover {
+    color: #007acc;
+}
+
+/* FOOTER - MANTENIDO IGUAL */
 .footer {
-    background: var(--dark);
-    color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ===== MEDIA QUERIES ===== */
 @media (max-width: 768px) {
-
-    html {
-        font-size: 100%;
+    body {
+        padding-top: 70px;
     }
-
-    .nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
+    
     .nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: none !important;
     }
-
+    
+    .menu-toggle {
+        display: block;
+    }
+    
     .hero {
-        padding: 3rem 1rem;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
     }
-
+    
     .hero-text h1 {
         font-size: 2rem;
     }
-
-    .hero-img img {
-        width: 140px;
-        height: 140px;
+    
+    .hero-text p {
+        font-size: 1rem;
     }
-
+    
+    .hero-img img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
     .project-card img {
         max-height: 200px;
     }
+    
+    .dual-images img {
+        max-height: 150px;
+    }
+}
 
-    .hobby-card,
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hobby-card {
+        min-width: 100%;
+    }
+    
+    .skill-group {
+        min-width: 100%;
+    }
+    
     .cert-card {
-        width: 90%;
+        min-width: 100%;
+    }
+    
+    .btn {
+        display: inline-block;
+        margin-bottom: 0.5rem;
     }
 }

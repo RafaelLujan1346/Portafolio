@@ -14,10 +14,17 @@
 </head>
 <body>
 
-
+<!-- NAVBAR MODIFICADO CON MENÚ HAMBURGUESA -->
 <nav class="nav">
     <h2>Rafael</h2>
-    <ul>
+    
+    <!-- Botón hamburguesa para móvil -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Menú normal para desktop -->
+    <ul class="nav-menu" id="navMenu">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
@@ -26,6 +33,26 @@
         <li><a href="#contacto">Contáctame</a></li>
     </ul>
 </nav>
+
+<!-- Menú lateral móvil (overlay) -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menú</h3>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#certificaciones">Certificaciones</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contáctame</a></li>
+        </ul>
+    </div>
+</div>
 
 <section id="inicio" class="hero">
     <div class="hero-text">
@@ -47,7 +74,6 @@
         Tengo experiencia trabajando de forma individual y en equipo, desarrollando soluciones funcionales desde cero.
     </p>
 </section>
-
 
 <section id="pasatiempos" class="section">
     <h2>Pasatiempos</h2>
@@ -81,8 +107,6 @@
 </div>
 
 </section>
-
-
 
 <section id="proyectos" class="section">
     <h2>Proyectos Destacados</h2>
@@ -178,9 +202,7 @@
     </div>
 </div>
 
-
 </section>
-
 
 <section id="certificaciones" class="section">
     <h2>Certificaciones</h2>
@@ -240,7 +262,6 @@
 </div>
 
 </section>
-
 
 <section id="contacto" class="section">
     <h2>Contáctame</h2>
