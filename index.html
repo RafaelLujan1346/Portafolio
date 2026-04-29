@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -7,16 +8,18 @@
 <title>Rafael Lujan | Portafolio</title>
 
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
 
-<!-- NAV -->
+
 <nav class="nav">
     <h2>Rafael</h2>
     <ul>
         <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#certificaciones">Certificaciones</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
@@ -24,120 +27,220 @@
     </ul>
 </nav>
 
-<!-- HERO -->
 <section id="inicio" class="hero">
     <div class="hero-text">
         <h1>Hola, soy Rafael 👋</h1>
-        <p>Desarrollador web y entusiasta de la tecnología, con proyectos en programación, robótica y diseño digital.</p>
+        <p>Estudiante de desarrollo de software con experiencia en proyectos web, robótica y sistemas interactivos.</p>
         <a href="#proyectos" class="btn">Ver proyectos</a>
+        <a href="#contacto" class="btn secondary">Contáctame</a>
     </div>
     <div class="hero-img">
         <img src="img/yo.jpeg" alt="Foto de Rafael Lujan">
     </div>
 </section>
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="section">
-    <h2>Proyectos</h2>
+<section id="sobre-mi" class="section">
+    <h2>Sobre mí</h2>
+    <p>
+        Soy estudiante de desarrollo de software con interés en tecnologías web, sistemas embebidos y diseño 3D.
+        Me enfoco en el aprendizaje práctico mediante la creación de proyectos que integran distintas tecnologías.
+        Tengo experiencia trabajando de forma individual y en equipo, desarrollando soluciones funcionales desde cero.
+    </p>
+</section>
 
-    <div class="project-card">
-        <img src="img/proyecto1.png" alt="Tienda Tradoox">
-        <div class="overlay">
-            <h3>Tienda Tradoox</h3>
-            <p>Interfaz de comercio electronico similar a mercado libre y de mis primeras paginas para la introduccion a html y css </p>
-        </div>
+
+<section id="pasatiempos" class="section">
+    <h2>Pasatiempos</h2>
+
+<div class="hobbies">
+
+    <div class="hobby-card">
+        <i class="fas fa-gamepad"></i>
+        <h3>Videojuegos</h3>
+        <p>Disfruto jugar videojuegos como forma de entretenimiento y análisis de mecánicas interactivas.</p>
     </div>
 
-    <div class="project-card">
-        <img src="img/proyecto2.png" alt="Videojuego Carmen Sandiego">
-        <div class="overlay">
-            <h3>Videojuego Carmen Sandiego</h3>
-            <p>Juego educativo con interfaz interactiva. Proyecto ludico para reforzar conocimientos de geografía y cultura. de mis primeros proyectos aplicando metodologias de investigacion en base a una comunidad que en este caso son ninños de primaria</p>
-        </div>
+    <div class="hobby-card">
+        <i class="fas fa-music"></i>
+        <h3>Música</h3>
+        <p>Escuchar música forma parte de mi proceso creativo y concentración al desarrollar proyectos.</p>
     </div>
 
-    <div class="project-card">
-        <img src="img/proyecto3.jpeg" alt="Galería ArtMood">
-        <div class="overlay">
-            <h3>ArtMood</h3>
-            <p>Galería interactiva de arte digital. Proyecto UI/UX que permite explorar obras según emociones y compartir experiencias artísticas. Primer proyecto desarrollado con laravel y colaboracion con compañeros de estudio para fomentar el trabajo en equipo</p>
-        </div>
+    <div class="hobby-card">
+        <i class="fas fa-code"></i>
+        <h3>Desarrollo de videojuegos</h3>
+        <p>Creo videojuegos utilizando Godot, explorando mecánicas, lógica y diseño interactivo.</p>
     </div>
 
-    <div class="project-card">
-        <img src="img/arduino1.jpeg" alt="Brazo robótico">
-        <div class="overlay">
-            <h3>Brazo Robótico</h3>
-            <p>Modelo educativo con servomotores y control electrónico. Proyecto de robótica para manipulación de objetos pequeños.</p>
-        </div>
+    <div class="hobby-card">
+        <i class="fas fa-pencil-alt"></i>
+        <h3>Dibujo</h3>
+        <p>Practico dibujo como forma de desarrollar creatividad visual y mejorar habilidades de diseño.</p>
     </div>
 
-    <div class="project-card">
-        <img src="img/Blender.png" alt="Modelado 3D en Blender">
-        <div class="overlay">
-            <h3>Modelado 3D</h3>
-            <p>Figura estilo LEGO creada en Blender con referencias ortográficas para una mayor precision. Proyecto de modelado digital e introduccion al diseño 3D.</p>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <div class="dual-images">
-            <img src="img/carroArduino.jpeg" alt="Carro Arduino">
-            <img src="img/Diagrama.png" alt="Esquema Electrónico">
-        </div>
-        <div class="overlay">
-            <h3>Carro Arduino con Esquema Electrónico</h3>
-            <p>Vehículo robótico controlado por Arduino, equipado con motores DC, sensores ultrasónicos y módulo Bluetooth. 
-            El proyecto incluye el diseño del esquema electrónico completo en Arduino Mega, mostrando la conexión de motores, sensores y control remoto. 
-            Este trabajo combina tanto la construcción física del carro como la documentación técnica del circuito, el primero de mis proyectos de internet en las cosas.</p>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <img src="img/Archimarket.png" alt="ArchiMarket">
-        <div class="overlay">
-            <h3>ArchiMarket</h3>
-            <p>Plataforma web para arquitectos que permite descargar modelos 3D optimizados para proyectos de diseño y construcción. 
-            ArchiMarket ofrece una amplia biblioteca de recursos digitales, categorizados por estilos arquitectónicos y materiales.
-            Primera página subida a un servidor.
-        Un proyecto que combina tanto Laravel, React y una api en un mismo proyecto a la vez que tiene una app movil</p>
-            <a href="https://aarchimarket3d.alwaysdata.net" target="_blank">Visitar ArchiMarket</a>
-        </div>
-    </div>
+</div>
 
 </section>
+
+
+
+<section id="proyectos" class="section">
+    <h2>Proyectos Destacados</h2>
+
+<div class="project-card destacado">
+    <img src="img/Archimarket.png" alt="ArchiMarket">
+    <div class="overlay">
+        <h3>ArchiMarket</h3>
+        <p><strong>Proyecto más completo desarrollado hasta la fecha.</strong></p>
+        <p>
+        Plataforma web orientada a arquitectos para la descarga de modelos 3D optimizados.
+        Desarrollada integrando Laravel, React y una API, incluyendo también una aplicación móvil.
+        </p>
+        <p><strong>Tecnologías:</strong> Laravel, React, API REST</p>
+        <a href="https://github.com/DannyUR/ArchiMarket3D" target="_blank">Ver código</a>
+        <a href="https://aarchimarket3d.alwaysdata.net" target="_blank">Ver proyecto</a>
+    </div>
+</div>
+
+<div class="project-card destacado">
+    <img src="/img/arduino 1.jpeg" alt="Brazo robótico">
+    <div class="overlay">
+        <h3>Brazo Robótico</h3>
+        <p>
+        Desarrollo de un sistema robótico utilizando servomotores controlados con Arduino,
+        enfocado en la manipulación precisa de objetos pequeños.
+        </p>
+        <p><strong>Tecnologías:</strong> Arduino, Electrónica, C++</p>
+    </div>
+</div>
+
+<h2>Otros Proyectos</h2>
+
+<div class="project-card">
+    <img src="img/proyecto1.png" alt="Tienda Tradoox">
+    <div class="overlay">
+        <h3>Tienda Tradoox</h3>
+        <p>
+        Desarrollo de interfaz de comercio electrónico enfocada en la presentación de productos
+        y experiencia de usuario.
+        </p>
+        <p><strong>Tecnologías:</strong> HTML, CSS</p>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="img/proyecto2.png" alt="Videojuego Educativo">
+    <div class="overlay">
+        <h3>Videojuego Educativo</h3>
+        <p>
+        Juego interactivo orientado al aprendizaje de geografía, desarrollado con enfoque en diseño de interfaz y experiencia del usuario.
+        </p>
+        <p><strong>Tecnologías:</strong> JavaScript, Diseño UI</p>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="img/proyecto3.jpeg" alt="Galería ArtMood">
+    <div class="overlay">
+        <h3>ArtMood</h3>
+        <p>
+        Galería digital interactiva basada en emociones, desarrollada como proyecto colaborativo
+        utilizando Laravel y API.
+        </p>
+        <p><strong>Tecnologías:</strong> Laravel, PHP</p>
+        <a href="https://github.com/DannyUR/ArtMood" target="_blank">Ver código</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <div class="dual-images">
+        <img src="img/carroArduino.jpeg" alt="Carro Arduino">
+        <img src="img/Diagrama.png" alt="Esquema Electrónico">
+    </div>
+    <div class="overlay">
+        <h3>Carro Arduino</h3>
+        <p>
+        Vehículo robótico con motores DC, sensores ultrasónicos y comunicación Bluetooth,
+        incluyendo diseño completo del esquema electrónico.
+        </p>
+        <p><strong>Tecnologías:</strong> Arduino, Electrónica</p>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="img/Blender.png" alt="Modelado 3D">
+    <div class="overlay">
+        <h3>Modelado 3D</h3>
+        <p>
+        Creación de modelos digitales utilizando Blender con enfoque en precisión y referencias ortográficas.
+        </p>
+        <p><strong>Tecnologías:</strong> Blender</p>
+    </div>
+</div>
+
+
+</section>
+
 
 <section id="certificaciones" class="section">
     <h2>Certificaciones</h2>
     <div class="certifications">
 
-        <div class="cert-card">
-            <img src="/img/insigniaLinux.png" alt="Certificación Linux Unhatched">
-            <p>Curso Linux Unhatched en Cisco Networking Academy. Fundamentos de Linux y administración básica.</p>
-        </div>
-
-        <div class="cert-card">
-            <img src="/img/certificadoLinux.png" alt="Certificado Linux Unhatched">
-            <p>Certificado emitido en junio 2025 por Cisco Networking Academy, validando conocimientos en Linux básico.</p>
-        </div>
-
+    <div class="cert-card">
+        <img src="/img/insigniaLinux.png" alt="Certificación Linux">
+        <p>Fundamentos de Linux y administración básica.</p>
     </div>
+
+    <div class="cert-card">
+        <img src="/img/certificadoLinux.png" alt="Certificado Linux">
+        <p>Certificación en Linux básico emitida por Cisco Networking Academy.</p>
+    </div>
+
+</div>
+
 </section>
 
 <section id="habilidades" class="section">
     <h2>Habilidades</h2>
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>Arduino</span>
-        <span>Blender</span>
-        <span>Godot</span>
+
+<div class="skills-container">
+
+    <!-- DESARROLLO WEB -->
+    <div class="skill-group">
+        <h3>Desarrollo Web</h3>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+        </div>
     </div>
+
+    <div class="skill-group">
+        <h3>Programación y Tecnología</h3>
+        <div class="skills">
+            <span>Arduino</span>
+            <span>C++</span>
+            <span>APIs REST</span>
+        </div>
+    </div>
+
+    <!-- DISEÑO Y HERRAMIENTAS -->
+    <div class="skill-group">
+        <h3>Diseño y Herramientas</h3>
+        <div class="skills">
+            <span>Blender</span>
+            <span>UI/UX</span>
+            <span>Godot</span>
+        </div>
+    </div>
+
+</div>
+
 </section>
+
 
 <section id="contacto" class="section">
     <h2>Contáctame</h2>
@@ -153,5 +256,6 @@
 </footer>
 
 <script src="app.js"></script>
+
 </body>
 </html>
